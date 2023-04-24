@@ -1,0 +1,55 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - what_do_you_have
+  - vegetarian
+  - non_veg
+  - order_name_veg
+  - order_name_non_veg
+
+responses:
+  utter_botgreet:
+  - text: "How can i help you sir ?"
+  utter_veg_non_veg:
+  - text: "What would you prefer veg or non-veg"
+  utter_veg:
+  - text: "We have salad, Pho chay, ..."
+  utter_non_veg:
+  - text: "We have fry rices, lẩu cá lốc, ..."
+  utter_anythingelse:
+  - text: "Is there any thing else sir ?"
+  utter_thanks:
+  - text : "Thanks. We will get your order shortly"
+
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_botgreet
+- utter_veg_non_veg
+- utter_veg
+- utter_non_veg
+- utter_anythingelse
+- utter_thanks
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
